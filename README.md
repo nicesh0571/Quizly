@@ -45,12 +45,12 @@
 
 ## 📂 프로젝트 구조
 
-Quizly_django/
-├── quizly_app/
-│   ├── forms.py
-│   ├── views.py
-│   ├── templates/
-│   │   └── upload.html
+Quizly_django/   
+├── quizly_app/   
+│   ├── forms.py   
+│   ├── views.py   
+│   ├── templates/   
+│   │   └── upload.html   
 ├── media/
 │   ├── summary.txt
 │   ├── recording_summary.txt
