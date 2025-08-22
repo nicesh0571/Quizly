@@ -46,19 +46,31 @@
 ## 📂 프로젝트 구조
 
 Quizly_django/   
+│
 ├── quizly_app/   
-│   ├── forms.py   
-│   ├── views.py   
-│   ├── templates/   
-│   │   └── upload.html   
-├── media/   
-│   ├── summary.txt   
-│   ├── recording_summary.txt   
-│   ├── recording_summary_highlighted.txt   
-│   ├── generated_quiz.txt   
+│ ├── media/ # 생성된 파일들 저장 위치   
+│ ├── quizly/   
+│ │ ├── init.py   
+│ │ ├── admin.py   
+│ │ ├── apps.py   
+│ │ ├── forms.py # 업로드 폼 정의   
+│ │ ├── models.py   
+│ │ ├── tests.py   
+│ │ ├── views.py # 핵심 로직: 요약, 강조, 퀴즈 생성   
+│ │ ├── migrations/   
+│ │ └── templates/   
+│ │ └── upload.html # 파일 업로드 및 결과 확인 템플릿   
+│ └── pycache/   
+│
+├── quizly_app/   
+│ ├── init.py   
+│ ├── asgi.py   
+│ ├── settings.py # 환경 설정   
+│ ├── urls.py # URL 라우팅   
+│ └── wsgi.py   
+│
+├── .env # Gemini API KEY (환경변수)   
 ├── manage.py   
-├── requirements.txt   
-└── .env   
 
 ---
 ## ✅ 설치 및 실행 방법
