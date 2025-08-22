@@ -1,0 +1,6 @@
+Django>=5.0
+pdfplumber
+python-dotenv
+openai-whisper
+google-generativeai
+tqdm
