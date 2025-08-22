@@ -1,0 +1,48 @@
+<!-- quizly_app/templates/upload.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>📄 Quizly 파일 업로드</title>
+</head>
+<body>
+  <h1>📄 PDF & 오디오 업로드</h1>
+
+  <!-- ✅ Django 메시지를 JavaScript alert로 항상 표시 -->
+  {% if messages %}
+    <script>
+      {% for message in messages %}
+        alert('{{ message|escapejs }}');  <!-- ✅ 작은따옴표로 변경 -->
+      {% endfor %}
+    </script>
+  {% endif %}
+
+  <!-- ✅ 파일 업로드 폼 -->
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" name="action" value="pdf">📘 PDF 업로드 및 요약</button>
+    <button type="submit" name="action" value="audio">🎧 오디오 업로드 및 요약</button>
+    <button type="submit" name="action" value="both">🧠 PDF + 오디오 요약</button>
+  </form>
+
+  <!-- 📘 PDF 요약 출력 -->
+  {% if pdf_summary %}
+    <h2>📘 PDF 요약 결과</h2>
+    <pre>{{ pdf_summary }}</pre>
+    <a href="/media/summary.txt" download>📥 PDF 요약 다운로드</a>
+  {% endif %}
+
+  <!-- 🎧 오디오 요약 출력 -->
+  {% if audio_summary %}
+    <h2>🎧 오디오 요약 결과</h2>
+    <pre>{{ audio_summary }}</pre>
+    <a href="/media/recording_summary.txt" download>📥 오디오 요약 다운로드</a>
+    <br>
+    <a href="/media/recording_summary_highlighted.txt" download>✅ 강조 요약 다운로드</a>
+    <br>
+    <a href="/media/generated_quiz.txt" download>🧠 퀴즈 다운로드</a>
+  {% endif %}
+</body>
+</html>

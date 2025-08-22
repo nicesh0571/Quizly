@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>📄 PDF 요약 결과</title>
+    <style>
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        textarea {
+            width: 100%;
+            height: 400px;
+            padding: 15px;
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            resize: vertical;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .button:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <h1>📄 PDF 요약</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="button" type="submit">요약 시작</button>
+    </form>
+
+    {% if summary %}
+        <h2>📌 요약 결과:</h2>
+        <textarea readonly>{{ summary }}</textarea>
+    {% endif %}
+</body>
+</html>

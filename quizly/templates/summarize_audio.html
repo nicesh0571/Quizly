@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>🎙️ 녹음 요약 결과</title>
+</head>
+<body>
+  <h1>🎙️ 녹음 요약 결과</h1>
+
+  {% if summary %}
+    <h2>📋 요약 결과:</h2>
+    <pre>{{ summary }}</pre>
+  {% else %}
+    <p>녹음 파일을 업로드해 주세요.</p>
+  {% endif %}
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">녹음 파일 요약</button>
+  </form>
+
+  <p><a href="{% url 'upload' %}">⬅ 파일 업로드로 돌아가기</a></p>
+</body>
+</html>

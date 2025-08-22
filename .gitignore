@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+.env
+*.sqlite3
+
+# Django static/media
+/media/
+/staticfiles/
+
+# VSCode
+.vscode/
+
+# Jupyter & Notebook Checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

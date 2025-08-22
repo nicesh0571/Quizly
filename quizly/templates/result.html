@@ -1,0 +1,14 @@
+<!-- quizly_app/quizly/templates/result.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>📌 처리 결과</title>
+</head>
+<body>
+  <h1>{{ message }}</h1>
+  <p>{{ details }}</p>
+
+  <a href="{% url 'upload' %}">🔁 다시 업로드하기</a>
+</body>
+</html>
