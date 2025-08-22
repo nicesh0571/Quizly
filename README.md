@@ -47,15 +47,15 @@
 
 Quizly_django/
 ├── quizly_app/
-│ ├── forms.py
-│ ├── views.py
-│ ├── templates/
-│ │ └── upload.html
+│   ├── forms.py
+│   ├── views.py
+│   ├── templates/
+│   │   └── upload.html
 ├── media/
-│ ├── summary.txt
-│ ├── recording_summary.txt
-│ ├── recording_summary_highlighted.txt
-│ ├── generated_quiz.txt
+│   ├── summary.txt
+│   ├── recording_summary.txt
+│   ├── recording_summary_highlighted.txt
+│   ├── generated_quiz.txt
 ├── manage.py
 ├── requirements.txt
 └── .env
