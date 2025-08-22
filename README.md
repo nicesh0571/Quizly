@@ -51,14 +51,14 @@ Quizly_django/
 │   ├── views.py   
 │   ├── templates/   
 │   │   └── upload.html   
-├── media/
-│   ├── summary.txt
-│   ├── recording_summary.txt
-│   ├── recording_summary_highlighted.txt
-│   ├── generated_quiz.txt
-├── manage.py
-├── requirements.txt
-└── .env
+├── media/   
+│   ├── summary.txt   
+│   ├── recording_summary.txt   
+│   ├── recording_summary_highlighted.txt   
+│   ├── generated_quiz.txt   
+├── manage.py   
+├── requirements.txt   
+└── .env   
 
 ---
 ## ✅ 설치 및 실행 방법
